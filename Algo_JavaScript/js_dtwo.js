@@ -39,3 +39,27 @@ console.log(result1);
 
 var result2 = isPal( [3, 2, 1, 1, 2, 3] );
 console.log(result2);
+
+// other solution using while loop
+
+var start = 0;
+var end = arr.length-1;
+
+function isPal(arr) {
+    while(start < end) {
+    if(arr[start] != arr[end]) {
+        return false;
+    }
+    start ++;
+    end --;
+    }
+    return true
+}
+
+var result1 = isPal( [1, 1, 2, 2, 1] );
+console.log(result1);
+
+var result2 = isPal( [3, 2, 1, 1, 2, 3] );
+console.log(result2);
+
+
