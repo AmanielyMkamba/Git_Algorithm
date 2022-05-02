@@ -63,3 +63,18 @@ var result2 = isPal( [3, 2, 1, 1, 2, 3] );
 console.log(result2);
 
 
+// myName
+var myName = "Amani"
+
+console.log(myName)
+
+var myDay = "was long and good!";
+console.log("Good morrning! My Day " + myDay);
+
+function sayMyName(name) {
+    return "My name is Amani " + name
+}
+
+console.log(sayMyName("Amani"))
+
+
