@@ -24,11 +24,14 @@ while(start < end) {
 
 // reversing and array
 
-var arr = ["a", "b"]
+var arr = ["a", "b", "c"];
+var newArr = [];
 
-for( i = arr.length-1; i < arr.length; i--) {
-    console. log(i)
+for(var i = arr.length-1; i >= 0; i--) {
+    newArr.push(arr[i])
 }
+console. log(newArr)
+
 
 
 
