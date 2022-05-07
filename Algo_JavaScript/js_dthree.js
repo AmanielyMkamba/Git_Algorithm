@@ -30,7 +30,20 @@ var newArr = [];
 for(var i = arr.length-1; i >= 0; i--) {
     newArr.push(arr[i])
 }
-console. log(newArr)
+console.log(newArr)
+
+
+// function for reverse array
+
+function reverseArray(array) {
+    let newArray = [];
+    for(var i = array.length-1; i >= 0; i--) {
+        // console.log(i)
+        newArray.push(array[i]);
+    }
+    return newArray
+}
+console.log(reverseArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
 
 
 
