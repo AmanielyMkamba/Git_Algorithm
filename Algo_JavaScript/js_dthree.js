@@ -43,6 +43,7 @@ function reverseArray(array) {
     }
     return newArray
 }
+
 console.log(reverseArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
 
 
