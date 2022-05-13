@@ -39,3 +39,6 @@ var lifesAnswers = [
     "Very doubtful."
 ];
 
+
+console.log(Math.random(lifesAnswers))
+
