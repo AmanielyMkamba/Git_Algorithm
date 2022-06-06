@@ -8,3 +8,6 @@ console.log(monster["id"])
 console.log(monster["name"])
 console.log(monster["types"][0])
 console.log(monster["types"][1])
+
+console.log(monster.name)
+console.log(monster.types[1])
