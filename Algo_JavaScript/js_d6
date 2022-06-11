@@ -6,3 +6,14 @@ var arr2d = [ [2, 5, 8],
 console.log(arr2d[0][2]);
 // the first index `0` will select the `[2, 5, 8]` sub-array
 // the second index `2` will select the `8` out of that sub-array
+
+function isPresent2d(arr2d, value) {
+    for(var i = 0; i < arr2d.length; i++) {
+        if(value == arr2d[i]) {
+            return true
+        }
+    }
+    return false
+}
+
+console.log(isPresent2d([1,2,3], 4))
