@@ -38,8 +38,14 @@ var pokémon = [
     { "id": 148, "name": "Dragonair",  "types": ["dragon"] }
 ];
 
-for(var i = 0; i < pokémon.length; i++) {
-    if(pokémon[i].id > 99) {
+// for(var i = 0; i < pokémon.length; i++) {
+//     if(pokémon[i].id > 99) {
+//         console.log(pokémon[i].name)
+//     }
+// }
+
+for(var i=0; i<pokémon.length; i++) {
+    if(pokémon[i].id/3 == 0) {
         console.log(pokémon[i].name)
     }
 }
