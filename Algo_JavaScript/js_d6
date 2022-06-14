@@ -17,3 +17,4 @@ function isPresent2d(arr2d, value) {
 }
 
 console.log(isPresent2d([1,2,3], 4))
+console.log(isPresent2d([1,2,3,4], [1]))
