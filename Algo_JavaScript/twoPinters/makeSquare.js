@@ -1,7 +1,7 @@
 function make_squares(arr) {
-    const n = arr.length;
-    squares = Array(n).fill(0);
-    let highestSquareIdx = n - 1;
+    const n = arr.length; // => 5 [-2, -1, 0, 2, 3]
+    squares = Array(n).fill(0); // => [0,0,0,0,0,0]
+    let highestSquareIdx = n - 1; // => 4
     let left = 0,
     right = n - 1;
     while (left <= right) {
@@ -19,5 +19,5 @@ function make_squares(arr) {
     return squares;
 }
 
-console.log(`Squares: ${make_squares([-2, -1, 0, 2, 3])}`);
+console.log(`Squares: ${make_squares([-2, -1, 0, 2, 3])}`); // n => 5
 console.log(`Squares: ${make_squares([-3, -1, 0, 1, 2])}`);
