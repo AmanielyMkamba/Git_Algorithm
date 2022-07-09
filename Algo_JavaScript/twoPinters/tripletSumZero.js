@@ -37,3 +37,6 @@ function search_triplets(arr) {
   
   console.log(search_triplets([-3, 0, 1, 2, -1, 1, -2]));
   console.log(search_triplets([-5, 2, -1, -2, 3]));
+
+  console.log(search_triplets([-3, 0, 1, 2, -1, 1, -2]));
+  console.log(search_triplets([-5, 2, -1, -2, 3]));
