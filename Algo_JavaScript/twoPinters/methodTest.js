@@ -9,6 +9,10 @@
 // numsTwo.sort((a, b) => a - b)
 // console.log(numsTwo)
 
-const person = "Sheena";
-console.log(person.length)
+// const person = "Sheena";
+// console.log(person.length)
+
+const array = [-3, 0, 1, 2, -1, 1, -2];
+array.sort((a, b)=> a-b)
+console.log(array)
 
