@@ -13,6 +13,6 @@
 // console.log(person.length)
 
 const array = [-3, 0, 1, 2, -1, 1, -2];
-array.sort((a, b)=> a-b)
+array.sort((a, b) => a-b)
 console.log(array)
 
