@@ -12,7 +12,11 @@
 // const person = "Sheena";
 // console.log(person.length)
 
-const array = [-3, 0, 1, 2, -1, 1, -2];
-array.sort((a, b) => a-b)
+// const array = [-3, 0, 1, 2, -1, 1, -2];
+// array.sort((a, b) => a-b)
+// console.log(array)
+
+const array = [ 4,2,3,1];
+array.sort((a, b) => a - b);
 console.log(array)
 
