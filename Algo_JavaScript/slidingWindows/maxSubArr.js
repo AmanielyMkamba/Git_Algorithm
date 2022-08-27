@@ -10,20 +10,22 @@ Explanation: Subarray with maximum sum is [5, 1, 3].
 
 function maxSubArr(arr, k) {
     let maxSum = 0,
-        arrSum = 0,
-        arrStart = 0;
+        windowSum = 0,
+        windowStart = 0;
 
-     for(let arrEnd = 0; arrEnd < arr.length; arrEnd++) {
-         arrSum += arr[arrEnd];
-        if(arrEnd <= k -1) {
-            maxSum += Math.max(maxSum, arrSum);
-            arrSum -= arr[arrStart];
-            arrStart += 1;
+     for(let windowEnd = 0; windowEnd < arr.length; windowEnd++) {
+         windowSum += arr[windowEnd];
+        if(windowEnd <= k - 1) {
+            maxSum += Math.max(maxSum, windowSum);
+            windowSum -= arr[windowStart];
+            windowStart += 1;
         }
     }
     return maxSum
 }
 
 console.log(maxSubArr([2, 1, 5, 1, 3, 2], k=3))
+// console.log(maxSubArr([2, 1, -5, 1, 3, 2], k=3))
+// console.log(maxSubArr([2,2,2], k=3))
 
 
