@@ -21,37 +21,31 @@ Explanation: We can put 3 'B' in one basket and two 'C' in the other basket.
 This can be done if we start with the second letter: ['B', 'C', 'B', 'B', 'C']
  */
 
+function fruitsBaskets(fruits) {
+    let windowStart = 0,
+        maxLength = 0,
+        fruitFrequency = {};
 
-const fruits_into_baskets = (fruits) => {
-    // Create a map with {fruit: freq}
-    const fruitFreq = {} //
-  
-    // Initialize a window start and max fruit count
-    let windowStart = 0
-    let maxFruit = 0
-  
-    // Grow the window end until there
-    // are 3 or more fruits in the basket.
-    for (let windowEnd = 0; windowEnd < fruits.length; windowEnd++) {
-      let current = fruits[windowEnd]
-      // Increment or initialize fruit's frequency.
-      if (!(current in fruitFreq)) fruitFreq[current] = 0
-      fruitFreq[current]++
-  
-      // Slide the window until there are
-      // 2 or less total fruits in the basket.
-      while (Object.keys(fruitFreq).length > 2) {
-        let leftFruit = fruits[windowStart]
-        fruitFreq[leftFruit]--
-        if (fruitFreq[leftFruit] === 0) delete fruitFreq[leftFruit]
-        windowStart++ 
-      }
-  
-      // Update the the maximum fruit count.
-      maxFruit = Math.max(maxFruit, windowEnd - windowStart + 1)
-  
+// try to extend the range [windowStart, windowEnd]
+    for(let windowEnd = 0; windowEnd < fruits.length; windowEnd++) {
+        const rightFruit = fruits[windowEnd];
+        if(!(rightFruit in fruitFrequency)) {
+            fruitFrequency[rightFruit] = 0;
+        }
+        fruitFrequency[rightFruit] += 1;
+ // shrink the sliding window, until we are left with '2' fruits in the fruit frequency dictionary/object
+        while(Object.keys(fruitFrequency).length > 2) {
+            const leftFruit = fruits[windowStart];
+            fruitFrequency[leftFruit] -= 1;
+            if(fruitFrequency[leftFruit] === 0) {
+                delete fruitFrequency[leftFruit];
+            }
+            windowStart += 1; // shrink the window
+        }
+        maxLength = Math.max(maxLength, windowEnd - windowStart + 1);
     }
-  
-    return maxFruit
-  
-  };
+    return maxLength;
+}
+
+console.log(`Maximum number of fruits: ${fruitsBaskets(['A', 'B', 'C', 'A', 'C'])}`);
+console.log(`Maximum number of fruits: ${fruitsBaskets(['A', 'B', 'C', 'B', 'B', 'C'])}`);
